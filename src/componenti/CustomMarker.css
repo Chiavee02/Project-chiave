@@ -1,0 +1,61 @@
+.popup-container {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.image-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 10px 0;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+}
+
+.image-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.image-scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.image-track {
+  display: flex;
+  gap: 10px;
+}
+
+.image-track img {
+  max-height: 120px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.image-scroll-container:hover .image-track {
+  animation: scroll-x 5s linear infinite;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.markerbutton {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.markerbutton:hover {
+  background-color: #5d009b;
+}
